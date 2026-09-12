@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jyothi Arer | Software Testing & QA Portfolio</title>
+
+    <meta name="description"
+          content="Portfolio of Jyothi Arer, MSc Computer Science Graduate and aspiring Software Tester / QA Engineer.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0f172a;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #7dd3fc;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 720px;
+            color: #e2e8f0;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background: #7dd3fc;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #38bdf8;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* ABOUT */
+        .about-container {
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .about-container p {
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            margin: 12px 0;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+            border-top: 4px solid #38bdf8;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .skill-card ul {
+            padding-left: 20px;
+        }
+
+        .skill-card li {
+            margin: 7px 0;
+        }
+
+        /* PROJECT */
+        .project-section {
+            background: #eef6ff;
+        }
+
+        .project-card {
+            max-width: 1050px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+        }
+
+        .project-card h3 {
+            color: #1d4ed8;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            margin-bottom: 20px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .feature {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .tech {
+            margin-top: 20px;
+        }
+
+        .tech span {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 8px 13px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* EDUCATION */
+        .education-card {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-left: 5px solid #38bdf8;
+            border-radius: 10px;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+        }
+
+        .education-card h3 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        /* CONTACT */
+        .contact-section {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section .section-title h2 {
+            color: white;
+        }
+
+        .contact-section .section-title p {
+            color: #cbd5e1;
+        }
+
+        .contact-info {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+        }
+
+        .contact-info a {
+            color: #7dd3fc;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            background: #020617;
+            color: #94a3b8;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 80px 7%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+
+            .project-card,
+            .about-container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">Jyothi<span>.</span></div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Hi, I'm Jyothi Arer 👋</h1>
+
+        <h2>MSc Computer Science Graduate | Aspiring Software Tester / QA Engineer</h2>
+
+        <p>
+            I am a Computer Science graduate with an interest in
+            Software Testing, Quality Assurance, API Testing, SQL,
+            Python and reliable software applications.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#project" class="btn btn-primary">
+                View My Project
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>Get to know me and my technical interests</p>
+    </div>
+
+    <div class="about-container">
+
+        <p>
+            I am an MSc Computer Science graduate with an interest in
+            Software Testing and Quality Assurance.
+        </p>
+
+        <p>
+            I have knowledge of Manual Testing, SDLC, STLC,
+            API Testing using Postman, SQL, Oracle and Python basics.
+        </p>
+
+        <p>
+            I am interested in learning, improving my technical skills
+            and contributing to the development of reliable and
+            user-friendly software applications.
+        </p>
+
+        <ul class="about-list">
+
+            <li>🎓 <strong>Education:</strong> MSc Computer Science — 2026</li>
+
+            <li>🧪 <strong>Focus:</strong> Manual Testing & Quality Assurance</li>
+
+            <li>🔌 <strong>API:</strong> Postman & REST API Testing</li>
+
+            <li>🗄️ <strong>Database:</strong> SQL & Oracle</li>
+
+            <li>🐍 <strong>Programming:</strong> Python Basics</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <div class="section-title">
+        <h2>Technical Skills</h2>
+        <p>My areas of technical knowledge</p>
+    </div>
+
+    <div class="skills-grid">
+
+        <!-- TESTING -->
+        <div class="skill-card">
+
+            <h3>🧪 Software Testing</h3>
+
+            <ul>
+                <li>Manual Testing</li>
+                <li>SDLC & STLC</li>
+                <li>Black Box Testing</li>
+                <li>White Box Testing</li>
+                <li>Test Case Writing</li>
+                <li>Test Case Execution & Review</li>
+                <li>Smoke Testing</li>
+                <li>Functional Testing</li>
+                <li>Integration Testing</li>
+                <li>System Testing</li>
+                <li>Acceptance Testing</li>
+                <li>Regression Testing</li>
+                <li>Exploratory Testing</li>
+                <li>Ad-hoc Testing</li>
+                <li>Compatibility Testing</li>
+                <li>Bug Life Cycle</li>
+            </ul>
+
+        </div>
+
+
+        <!-- API -->
+        <div class="skill-card">
+
+            <h3>🔌 API Testing</h3>
+
+            <ul>
+                <li>Postman</li>
+                <li>REST API Testing</li>
+                <li>GET</li>
+                <li>POST</li>
+                <li>PUT</li>
+                <li>DELETE</li>
+                <li>Status Code Validation</li>
+                <li>Response Validation</li>
+                <li>Postman Collections</li>
+                <li>Environment Variables</li>
+            </ul>
+
+        </div>
+
+
+        <!-- DATABASE -->
+        <div class="skill-card">
+
+            <h3>🗄️ SQL & Database</h3>
+
+            <ul>
+                <li>RDBMS</li>
+                <li>SQL</li>
+                <li>DDL</li>
+                <li>DQL</li>
+                <li>DML</li>
+                <li>TCL</li>
+                <li>SQL Joins</li>
+                <li>Basic Normalization</li>
+                <li>Oracle 10g</li>
+            </ul>
+
+        </div>
+
+
+        <!-- PROGRAMMING -->
+        <div class="skill-card">
+
+            <h3>💻 Programming</h3>
+
+            <ul>
+                <li>Python Basics</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECT -->
+<section id="project" class="project-section">
+
+    <div class="section-title">
+
+        <h2>Featured Project</h2>
+
+        <p>MSc Major Project</p>
+
+    </div>
+
+
+    <div class="project-card">
+
+        <h3>
+            🚗 AI-Based Smart Car Rental Booking System
+            with Intelligent Vehicle Recommendation
+        </h3>
+
+        <p>
+            An intelligent web-based car rental booking system designed
+            to simplify the vehicle rental process and provide
+            personalized vehicle recommendations based on customer
+            requirements.
+        </p>
+
+
+        <h4>✨ Key Features</h4>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                🤖 AI-based intelligent vehicle recommendation
+            </div>
+
+            <div class="feature">
+                🚗 Online vehicle booking
+            </div>
+
+            <div class="feature">
+                💰 Dynamic rental price calculation
+            </div>
+
+            <div class="feature">
+                👨‍💼 Admin dashboard
+            </div>
+
+            <div class="feature">
+                📄 Automatic PDF receipt generation
+            </div>
+
+            <div class="feature">
+                ❌ Booking cancellation
+            </div>
+
+            <div class="feature">
+                🗄️ SQLite database
+            </div>
+
+            <div class="feature">
+                🆔 Unique booking ID generation
+            </div>
+
+        </div>
+
+
+        <h4>🛠️ Technologies Used</h4>
+
+        <div class="tech">
+
+            <span>Python</span>
+            <span>Flask</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>SQLite</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+    <div class="section-title">
+
+        <h2>Education</h2>
+
+        <p>Academic background</p>
+
+    </div>
+
+
+    <div class="education-card">
+
+        <h3>🎓 MSc Computer Science — 2026</h3>
+
+        <p>
+            Mysore, Karnataka
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+
+    <div class="section-title">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            Feel free to contact me regarding opportunities,
+            projects or professional discussions.
+        </p>
+
+    </div>
+
+
+    <div class="contact-info">
+
+        <p>
+            📧 Email:
+            <a href="mailto:jyothiarer23@gmail.com">
+                jyothiarer23@gmail.com
+            </a>
+        </p>
+
+        <p>
+            📱 Phone: 9019564385
+        </p>
+
+        <p>
+            🐙 GitHub:
+            <a href="https://github.com/JyothiArer" target="_blank">
+                github.com/JyothiArer
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Jyothi Arer. All Rights Reserved.
+    </p>
+
+    <p>
+        MSc Computer Science | Software Testing | QA | API Testing | SQL
+    </p>
+
+</footer>
+
+</body>
+</html>
